@@ -1,7 +1,7 @@
 exports.config = {
     framework: 'jasmine',
     diretConnect: true,
-    specs: ['./testcases/tc001.js', './testcases/tc002.js'],
+    specs: ['./testcases/tc001.js'],
     jasmineNodeOpts: {
         showColors: true,
         defaultTimeoutInterval: 999999

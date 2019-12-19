@@ -8,15 +8,21 @@ describe('TC001', () => {
         console.log("In Tc001");
         init.setUp();
     })
-    afterEach(()=>{
+    afterEach(() => {
         init.stop()
     })
     it('Run for DemoSalesManager', () => {
         const login = new loginPage.LoginPage();
         login.enterUserName('DemoSalesManager')
-        login.enterPassword('crmsfa')
-        let home = login.clickLoginBtn()
-        home.verifyLoggedInName("Demo Sales Manager")
-        home.clickCRMSFA().clickLogout()
+            .enterPassword('crmsfa')
+            .clickLoginBtn()
+            .verifyLoggedInName("Demo Sales Manager")
+            .clickCRMSFA()
+            .clickCreateLead()
+            .enterComName('TestLeaf')
+            .enterFirstName('Koushik')
+            .enterLastName('Chatterjee')
+            .clickSubmitBtn()
+            .verifyFirstName('Chatterjee')
     })
 })
