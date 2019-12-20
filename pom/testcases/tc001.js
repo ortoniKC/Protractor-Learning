@@ -11,7 +11,7 @@ describe('TC001', () => {
     })
     let ex = new excel.ReadData()
     ex.getData('./data.xlsx', 'Sheet1').forEach((data)=>{
-        it('Run for DemoSalesManager', () => {
+        it('Create Lead', () => {
             const login = new loginPage.LoginPage();
             login.enterUserName(data.user)
             .enterPassword(data.pass)
