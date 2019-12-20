@@ -1,32 +1,30 @@
 // Login & Verify the user
-
+const excel = require('../../utils/DataFromExcel')
 const st = require("./../testcases/util.js")
 const init = new st.SetUp();
 const loginPage = require('./../pages/loginPage.js')
+
+
 describe('TC001', () => {
-    // @BeforeMethod
     beforeEach(() => {
-        console.log("In Tc001");
         init.setUp();
     })
-    // @AfterMethod
-    afterEach(() => {
-        init.stop()
-    })
-
-    // @Test
-    it('Run for DemoSalesManager', () => {
-        const login = new loginPage.LoginPage();
-        login.enterUserName('DemoSalesManager')
-            .enterPassword('crmsfa')
+    let ex = new excel.ReadData()
+    ex.getData('./data.xlsx', 'Sheet1').forEach((data)=>{
+        it('Run for DemoSalesManager', () => {
+            const login = new loginPage.LoginPage();
+            login.enterUserName(data.user)
+            .enterPassword(data.pass)
             .clickLoginBtn()
-            .verifyLoggedInName("Demo Sales Manager")
+            .verifyLoggedInName(data.verification)
             .clickCRMSFA()
             .clickCreateLead()
-            .enterComName('TestLeaf')
-            .enterFirstName('Koushik')
-            .enterLastName('Chatterjee')
+            .enterComName(data.cm)
+            .enterFirstName(data.fn)
+            .enterLastName(data.ln)
             .clickSubmitBtn()
-            .verifyFirstName('Chatterjee')
+            .verifyFirstName(data.fn)
+        })
     })
+
 })

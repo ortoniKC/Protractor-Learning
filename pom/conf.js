@@ -6,6 +6,9 @@ exports.config = {
         showColors: true,
         defaultTimeoutInterval: 999999
     },
+    params: {
+		baseUrl:'http://leaftaps.com/opentaps/control/logout'
+	},
     // capabilities: {
     //     'browserName': 'chrome',
     //     'shardTestFiles': true,

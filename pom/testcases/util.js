@@ -7,7 +7,7 @@ class SetUp {
         browser.manage().window().maximize()
         browser.manage().timeouts().implicitlyWait(30000)
         await driver.browser.manage().deleteAllCookies()
-        browser.get('http://leaftaps.com/opentaps')
+        browser.get(browser.params.baseUrl)
     }
     stop() {
         browser.close();
