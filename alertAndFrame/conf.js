@@ -1,6 +1,6 @@
 exports.config = {
     framework: 'jasmine',
-    specs : ['learnAlert.js'],
+    specs : ['frames.js'],
     directConnect: true,
     jasmineNodeOpts: {
         showColors: true,
