@@ -6,9 +6,9 @@ exports.config = {
         showColors: true,
         defaultTimeoutInterval: 999999
     },
-    capabilities: {
-        'browserName': 'chrome',
-        'shardTestFiles': true,
-        maxInstances: 2,
-    }
+    // capabilities: {
+    //     'browserName': 'chrome',
+    //     'shardTestFiles': true,
+    //     maxInstances: 2,
+    // }
 }
