@@ -9,8 +9,10 @@ class MyHomePage {
     }
     clickCreateLead(){
         driver.element(driver.by.linkText('Create Lead')).click()
-        return new cl.CreateLead();
+        return new cl.CreateLead()
+        // creating an obj for CL 
     }
 
 }
 exports.MyHomePage = MyHomePage;
+// Giving access to next module

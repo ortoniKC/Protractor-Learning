@@ -17,4 +17,5 @@ class LoginPage {
         return new home_page.HomePage();
     }
 }
+// module.exports  = new LoginPage();
 exports.LoginPage = LoginPage;

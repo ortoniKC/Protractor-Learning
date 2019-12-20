@@ -11,7 +11,7 @@ class HomePage {
 
     }
     verifyLoggedInName(user){
-        let userName = driver.element(driver.by.tagName('h2'))
+        let userName =  driver.element(driver.by.tagName('h2'))
         expect(userName.getText()).toContain(user);
         return this;
     }

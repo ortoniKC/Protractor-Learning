@@ -5,7 +5,7 @@ class SetUp {
     async setUp() {
         browser.ignoreSynchronization = true
         browser.manage().window().maximize()
-        browser.manage().timeouts().implicitlyWait(20)
+        browser.manage().timeouts().implicitlyWait(30000)
         await driver.browser.manage().deleteAllCookies()
         browser.get('http://leaftaps.com/opentaps')
     }
