@@ -19,4 +19,4 @@ exports.config = {
           displaySpecDuration: true
         }));
       }
-}
+} 

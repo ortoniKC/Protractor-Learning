@@ -8,11 +8,10 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "program": "${workspaceFolder}\\index.js"
+            "name": "run script",
+            "protocol": "inspector",
+            "program": "C:/Users/dell/AppData/Roaming/npm/node_modules/protractor/bin/protractor",
+            "args": ["${workspaceFolder}\\windowHandlings\\conf.js"]
         }
     ]
 }
