@@ -3,7 +3,7 @@ const HtmlReporter = require('protractor-beautiful-reporter');
 exports.config = {
   framework: 'jasmine',
   directConnect: true,
-  specs: ['reduce.js'],
+  specs: ['learnMap.js'],
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 999999
