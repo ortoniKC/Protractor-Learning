@@ -10,20 +10,20 @@ describe('TC001', () => {
         init.setUp();
     })
     let ex = new excel.ReadData()
-    ex.getData('./data.xlsx', 'Sheet1').forEach((data)=>{
+    ex.getData('./data.xlsx', 'Sheet1').forEach((data) => {
         it('Create Lead', () => {
             const login = new loginPage.LoginPage();
             login.enterUserName(data.user)
-            .enterPassword(data.pass)
-            .clickLoginBtn()
-            .verifyLoggedInName(data.verification)
-            .clickCRMSFA()
-            .clickCreateLead()
-            .enterComName(data.cm)
-            .enterFirstName(data.fn)
-            .enterLastName(data.ln)
-            .clickSubmitBtn()
-            .verifyFirstName(data.fn)
+                .enterPassword(data.pass)
+                .clickLoginBtn()
+                .verifyLoggedInName(data.verification)
+                .clickCRMSFA()
+                .clickCreateLead()
+                .enterComName(data.cm)
+                .enterFirstName(data.fn)
+                .enterLastName(data.ln)
+                .clickSubmitBtn()
+                .verifyFirstName(data.fn)
         })
     })
 

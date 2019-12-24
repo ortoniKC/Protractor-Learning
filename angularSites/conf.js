@@ -1,7 +1,7 @@
 exports.config = {
     framework: 'jasmine',
     directConnect: true,
-    specs: ['spec.js'],
+    specs: ['deleteAllEntries.js'],
     // multiCapabilities: [
     //     {
     //         'browserName': 'chrome',

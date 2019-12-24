@@ -9,8 +9,7 @@
 // a = 1;
 // console.log(a);
 
-
-function add(a, b) {
+(a,b) =>{
     return a+b;
 }
 // 100% polymorphism

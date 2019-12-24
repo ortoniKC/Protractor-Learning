@@ -1,19 +1,19 @@
 const driver = require('protractor')
 describe('Learn Actions', () => {
     beforeEach(() => {
-        browser.ignoreSynchronization = true
-        browser.manage().window().maximize()
-        browser.manage().timeouts().implicitlyWait(20)
+        driver.browser.waitForAngularEnabled(false)
+        // browser.manage().window().maximize()
+        browser.manage().timeouts().implicitlyWait(20000)
     })
-    xit('Drag & Drop', () => {
-        dragAndDrop()
-    })
-    xit('drag nad drop by', () => {
-        dragAndDropBy()
-    })
-    xit('selectable', () => {
-        selectable()
-    })
+    // xit('Drag & Drop', () => {
+    //     dragAndDrop()
+    // })
+    // xit('drag nad drop by', () => {
+    //     dragAndDropBy()
+    // })
+    // xit('selectable', () => {
+    //     selectable()
+    // })
     it('Sortable', async () => {
         sortable()
     })
@@ -30,7 +30,7 @@ async function sortable() {
     var x, y;
     // console.log(it5.getLocation());
     await it5.getLocation().then((loc) => {
-        console.log(loc.y);
+        console.log("In then fn: " + loc.y + " " + loc.x);
         x = loc.x;
         y = loc.y
     })
@@ -38,7 +38,7 @@ async function sortable() {
     await driver.browser.actions()
         .dragAndDrop(it1, { x: x, y: y })
         .perform()
-    browser.sleep(3000)
+    browser.sleep(10000)
 }
 
 
