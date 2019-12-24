@@ -1,6 +1,5 @@
 const driver = require('protractor')
 describe('Learn Reduce', () => {
-
     beforeAll(() => { driver.browser.waitForAngularEnabled(false) })
     it('Reduce', async () => {
         driver.browser.get('https://jqueryui.com/selectable/')
