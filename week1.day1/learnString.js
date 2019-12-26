@@ -1,12 +1,40 @@
-// find the greatest of 3 numbers
-let a = 10;
-let b = 4;
-let c = 6;
-if (a > b && a > c) {
-    console.log(a);
-} else if (b > a && b > c) {
-    console.log(b);
-} else console.log(c);
+// // find the greatest of 3 numbers
+// let a = 10;
+// let b = 4;
+// let c = 6;
+// if (a > b && a > c) {
+//     console.log(a);
+// } else if (b > a && b > c) {
+//     console.log(b);
+// } else console.log(c);
+
+
+// let s1 = "bcdef";
+// console.log(s1.includes('b', 1));
+
+// console.log(typeof (s1));
+// let s2 = s1.replace('bc', 'hey')
+// console.log(s2);
+
+let s3 = "testleaf"
+console.log(s3.substr(3, 0))
+console.log(s3.substring(3, 0));
+
+
+// console.log(s3.trim().length);
+
+
+
+// let s = new String('12123.40234')
+// s
+// let i = parseInt(s)
+// console.log(typeof (i, 5));
+// console.log(typeof (i.toString()));
+// let z = i.toString()
+// console.log(z);
+
+
+
 
 
 
