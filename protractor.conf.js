@@ -5,7 +5,7 @@ var HtmlReporter = require('protractor-beautiful-reporter');
 exports.config = {
     framework: 'jasmine',
     diretConnect: true,
-    specs: ['./testcases/tc001.js', './testcases/tc002.js'],
+    specs: ['./posse/thirdAssignment.js'],
     jasmineNodeOpts: {
         showColors: true,
         defaultTimeoutInterval: 999999

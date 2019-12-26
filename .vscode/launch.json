@@ -20,7 +20,7 @@
             "protocol": "inspector",
             "program": "C:/Users/dell/AppData/Roaming/npm/node_modules/protractor/bin/protractor",
             "args": [
-                "${workspaceFolder}\\pro\\conf.js"
+                "${workspaceFolder}\\protractor.conf.js"
             ]
         }
     ]
