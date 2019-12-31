@@ -1,27 +1,26 @@
-const mob = require('./Mobile.js')
-const mobile = new mob.Mobile('as');
-
-mobile.makeCall()
-mobile.makeCall(123)
-mobile.makeCall('kouhsik')
-mobile.sendSMS()
+import { mobile } from "./Mobile";
+// const mobile = new Mobile("as");
+// let mobile = new Mobile();
+mobile.makeCall();
+mobile.makeCall(123);
+mobile.makeCall("kouhsik");
+mobile.sendSMS();
 console.log(mobile.con);
-mobile.callCons()
-mobile.hey()
+mobile.callCons();
+mobile.hey();
 
-
-arr = [1,2,3]
+arr = [1, 2, 3];
 console.log("Foreach");
 
 arr.forEach(element => {
-    console.log(element);
+  console.log(element);
 });
-arr.push(4)
+arr.push(4);
 
 console.log("Of loop");
-arr.shift(5)
+arr.shift(5);
 for (const i of arr) {
-    console.log(i);
+  console.log(i);
 }
 
 // console.log("in loop");
