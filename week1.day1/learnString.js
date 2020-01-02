@@ -12,6 +12,7 @@
 // let s1 = "bcdef";
 // console.log(s1.includes('b', 1));
 
+
 // console.log(typeof (s1));
 // let s2 = s1.replace('bc', 'hey')
 // console.log(s2);

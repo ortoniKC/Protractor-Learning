@@ -16,9 +16,10 @@ describe("Learn Actions", () => {
   // xit('drag nad drop by', () => {
   //     dragAndDropBy()
   // })
-  // xit('selectable', () => {
-  //     selectable()
-  // })
+
+  it('selectable', () => {
+    selectable()
+  })
   it("Sortable", async () => {
     sortable();
   });
@@ -33,11 +34,16 @@ async function sortable() {
   let it5 = element(by.xpath("//li[text()='Item 5']"));
   var x, y;
   // console.log(it5.getLocation());
-  await it5.getLocation().then(loc => {
-    console.log("In then fn: " + loc.y + " " + loc.x);
-    x = loc.x;
-    y = loc.y;
-  });
+  let loc = await it5.getLocation();
+  console.log("Locations: " + loc);
+
+  x = loc.x;
+  y = loc.y;
+  //   .then(loc => {
+  //   console.log("In then fn: " + loc.y + " " + loc.x);
+  //   x = loc.x;
+  //   y = loc.y;
+  // });
   console.log(x + " " + y);
   await browser
     .actions()
@@ -52,8 +58,8 @@ function selectable() {
   let it1 = element(by.xpath("//li[text()='Item 1']"));
   let it3 = element(by.xpath("//li[text()='Item 3']"));
   let it5 = element(by.xpath("//li[text()='Item 5']"))
-    // element(by.css('body')).sendKeys(protractor.Key.CONTROL)
-    .browser.actions()
+  element(by.css('body')).sendKeys("", protractor.Key.CONTROL);
+  browser.actions()
     // .keyDown(.protractor.Key.CONTROL)
     .click(it1)
     .click(it3)

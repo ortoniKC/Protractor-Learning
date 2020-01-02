@@ -1,4 +1,4 @@
 exports.config = {
-    specs: ["K:\\ProtrcatorWS\\dropdowns\\drop.js"],
+    specs: ["K:\\ProtrcatorWS\\week2\\verifications.js"],
     directConnect: true
 }
