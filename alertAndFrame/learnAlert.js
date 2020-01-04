@@ -1,8 +1,23 @@
 // import { element } from "protractor"
 
-// import { browser, element, by } from "protractor"
+import { browser, element, by } from "protractor"
 
-describe('Learn Alert', () => {
+describe('Auth', () => {
+    it('Protractor Auth', async () => {
+        browser.waitForAngularEnabled(false)
+        browser.get('http://the-internet.herokuapp.com/digest_auth')
+        // element(by.linkText('Digest Authentication')).click()
+        let ec = browser.ExpectedConditions
+        // browser.wait(ec.alertIsPresent(), 5000)
+        browser.switchTo().alert().authenticateAs('admin', 'admin');
+        console.log(await browser.getTitle());
+
+    })
+})
+
+
+
+xdescribe('Learn Alert', () => {
     beforeAll(() => {
         console.log('how many ?');
         browser.ignoreSynchronization = true

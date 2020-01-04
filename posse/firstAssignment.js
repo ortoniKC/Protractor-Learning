@@ -1,15 +1,16 @@
 const driver = require('protractor')
 describe('Posse', () => {
+
     it('Launch Posse', () => {
-        driver.browser.get('http://posse.com/')
-    })
-    it(' click on LOG IN', () => {
-        driver.element(driver.by.linkText('LOG IN')).click()
-    })
-    it('Sign in', () => {
+        driver.browser.get('http://posse.com/signin')
+        // driver.element(driver.by.linkText('LOG IN')).click()
+        // it(' click on LOG IN', () => {
+        // })
+        // it('Sign in', () => {
         driver.element(driver.by.model('email')).sendKeys('koushik.chatterjee@testleaf.com')
         driver.element(driver.by.model('password')).sendKeys('test@123')
         driver.element(driver.by.buttonText('Sign in')).click()
+        // })
     })
     it('CLick on Profile', () => {
         driver.element(driver.by.css("a[class*='userLoggedIn']")).click()
