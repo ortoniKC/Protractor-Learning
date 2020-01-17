@@ -8,27 +8,20 @@ require("babel-register")({
 exports.config = {
   framework: "jasmine",
   diretConnect: true,
-  // seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ["conf.js"],
   jasmineNodeOpts: {
     showColors: true,
-    defaultTimeoutInterval: 999999
-  },
-  params: {
-    baseUrl: "http://leaftaps.com/opentaps/control/logout",
-    userName: "DemoSalesManager",
-    password: "crmsfa"
+    defaultTimeoutInterval: 10000
   },
   capabilities: {
-    browserName: "chrome",
-    shardTestFiles: !true
-    // maxInstances: 2,
-    // 'operaOptions': {
-    //     'binary': 'C:\\Users\\dell\\AppData\\Local\\Programs\\Opera\\launcher.exe'
-    //     // 'args': {
-    //     //     'useAutomationExtension': false
-    //     // }
-    // }
+    "count": 1,
+    "browserName": "chrome",
+    "goog:chromeOptions": [
+      {
+        "debuggerAddress": 'localhost:53721'
+      }
+    ]
+
   },
   onPrepare: () => {
     // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:

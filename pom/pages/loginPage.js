@@ -13,7 +13,8 @@ class LoginPage {
         return this;
     }
     clickLoginBtn() {
-        driver.element(driver.by.className('decorativeSubmit')).click()
+        // driver.element(driver.by.className('decorativeSubmit')).click()
+        driver.element(driver.by.buttonText('Login')).click()
         return new home_page.HomePage();
     }
 }
