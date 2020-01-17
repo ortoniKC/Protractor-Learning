@@ -5,7 +5,7 @@ exports.config = {
   directConnect: true,
   specs: ['learnWH.js'],
   jasmineNodeOpts: {
-    showColors: true,
+    showColors: true, 
     defaultTimeoutInterval: 999999
   },
   onPrepare: function () {
